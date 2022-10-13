@@ -6,15 +6,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  transition-property: color, background-color;
+  transition-duration: 0.15s;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(48px + 1.75rem);
   background-color: var(--primary-color);
 }
 
 body {
   overflow-x: hidden;
+  min-height: 200vh;
 }
 
 .max-width {
@@ -31,7 +36,7 @@ body {
   --primary-color: #f1eff5;
   --primary-color-2: #dcd9e2;
   --secondary-color: #080911;
-  --secondary-color-2: #0f111f;
+  --secondary-color-2: #141629;
 
   --accent-color-1: #ee7752;
   --accent-color-2: #e73c7e;
@@ -41,7 +46,7 @@ body {
 
 [data-theme="dark"]:root {
   --primary-color: #080911;
-  --primary-color-2: #0f111f;
+  --primary-color-2: #141629;
   --secondary-color: #f1eff5;
   --secondary-color-2: #dcd9e2;
 
@@ -64,29 +69,40 @@ body {
 h1 {
   font-family: var(--headline-text);
   font-size: clamp(2.5rem, 1.25rem + 5vw, 5rem);
+  font-weight: 700;
   line-height: 1.25;
   color: var(--secondary-color);
+  padding-bottom: 1rem;
 }
 
 h2 {
   font-family: var(--headline-text);
-  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.75rem);
+  font-weight: 700;
   line-height: 1.25;
   color: var(--secondary-color);
+  padding-bottom: 0.5rem;
 }
 
 h3 {
   font-family: var(--headline-text);
   font-size: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem);
+  font-weight: 500;
   line-height: 1.25;
   color: var(--secondary-color);
+  padding-bottom: 0.25rem;
+}
+
+p + h3 {
+  margin-top: 24px;
 }
 
 p {
   font-family: var(--body-text);
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.5;
-  color: var(--secondary-color);
+  color: var(--secondary-color-2);
+  padding-bottom: 0.25rem;
 }
 
 a {
@@ -111,7 +127,7 @@ button {
 
 .btn {
   border: none;
-  padding: 12px 32px;
+  padding: 16px 32px;
   border-radius: 32px;
 }
 
@@ -119,7 +135,7 @@ button {
   border: 1px solid var(--secondary-color);
   background-color: transparent;
   color: var(--secondary-color);
-  padding: 12px 32px;
+  padding: 16px 32px;
   border-radius: 32px;
   transition-property: border, background-color;
   transition-duration: 0.15s;
@@ -207,10 +223,14 @@ button {
 
 header {
   position: relative;
-  min-height: 85vh;
+  min-height: 90vh;
   width: 100vw;
   margin-top: calc(-24px - 1.75rem);
   padding-top: calc(48px + 1.75rem);
+}
+
+header h2 {
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
 }
 
 header::after {
@@ -249,8 +269,11 @@ header::after {
   color: var(--primary-color-2);
 }
 
+.header-text .ghost-btn {
+  margin-top: 32px;
+}
+
 [data-theme="light"] .header-text .ghost-btn {
-  margin-top: 40px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
 }
@@ -272,8 +295,26 @@ header::after {
 
 /* #endregion header */
 
-/* #region */
-/* #endregion */
+/* #region about */
+
+#about {
+  margin-top: 20px;
+}
+
+#about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px 120px;
+}
+
+.right-column {
+  max-width: 600px;
+}
+
+/* #endregion about */
 
 /* #region animations */
 
