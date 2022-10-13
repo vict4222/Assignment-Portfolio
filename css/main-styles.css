@@ -8,4 +8,125 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.max-width {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 8px;
+}
+
 /* #endregion global */
+
+/* #region colors */
+
+[data-theme="light"]:root {
+  --primary-color: #f1eff5;
+}
+
+[data-theme="dark"]:root {
+  --primary-color: #080911;
+}
+
+/* #endregion colors */
+
+/* #region fonts */
+
+:root {
+  --headline-text: "Roboto Slab", serif;
+  --body-text: "Ubuntu", sans-serif;
+  --display-text: "Roboto Mono", monospace;
+}
+
+h1 {
+  font-family: var(--headline-text);
+}
+
+h2 {
+  font-family: var(--headline-text);
+}
+
+h3 {
+  font-family: var(--headline-text);
+}
+
+p {
+  font-family: var(--body-text);
+}
+
+a {
+  font-family: var(--body-text);
+  text-decoration: none;
+}
+
+/* #endregion fonts */
+
+/* #region navigation */
+
+#nav-container {
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 12px;
+  align-items: center;
+}
+
+#home {
+  font-size: 1.5rem;
+}
+
+#nav-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2.25rem;
+  margin-left: auto;
+}
+
+.nav-item {
+  position: relative;
+  list-style: none;
+}
+
+.nav-item::before {
+  position: absolute;
+  font-family: var(--display-text);
+  font-size: 0.75rem;
+  bottom: 1px;
+  left: -1.25rem;
+}
+
+.nav-item:nth-child(1)::before {
+  content: "01.";
+}
+
+.nav-item:nth-child(2)::before {
+  content: "02.";
+}
+
+.nav-item:nth-child(3)::before {
+  content: "03.";
+}
+
+.nav-link {
+  font-size: 1.25rem;
+}
+
+#theme-toggle {
+  position: relative;
+  height: 26px;
+  width: 52px;
+  aspect-ratio: 2 / 1;
+  border-radius: 13px;
+  border: 2px solid black;
+}
+
+/* #endregion navigation */
+
+/* #region */
+/* #endregion */
