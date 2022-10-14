@@ -114,6 +114,10 @@ a {
   font-weight: 500;
 }
 
+a:not(:is(#home, .nav-link)):hover {
+  text-decoration: underline;
+}
+
 .display {
   font-family: var(--display-text);
 }
@@ -196,6 +200,10 @@ button {
   gap: 20px;
   padding-block: 12px;
   align-items: center;
+}
+
+[data-theme="dark"] :is(#home, .nav-link) {
+  color: var(--secondary-color);
 }
 
 #home {
@@ -419,10 +427,6 @@ header::after {
   padding-inline: 12px;
 }
 
-.card-actions a:hover {
-  text-decoration: underline;
-}
-
 @media (hover: none) {
   .card-img {
     filter: brightness(0.9);
@@ -470,6 +474,51 @@ header::after {
 
 /* #endregion conclusion */
 
+/* #region footer */
+
+footer {
+  background-color: var(--secondary-color);
+  padding-block: 16px;
+}
+
+[data-theme="dark"] footer {
+  --primary-color: #f1eff5;
+  --primary-color-2: #dcd9e2;
+  --secondary-color: #080911;
+  --secondary-color-2: #141629;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-menu > a {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+footer h3 {
+  color: var(--primary-color);
+}
+
+footer p {
+  color: var(--primary-color-2);
+  font-size: 0.9rem;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* #endregion footer */
+
 /* #region animations */
 
 @keyframes gradient {
@@ -485,6 +534,3 @@ header::after {
 }
 
 /* #endregion animations */
-
-/* #region */
-/* #endregion */
