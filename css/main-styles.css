@@ -239,6 +239,7 @@ button {
   position: relative;
   height: 26px;
   width: 46px;
+  aspect-ratio: 46 / 26;
   background-color: var(--accent-color-3);
   border-radius: 20px;
   border: 2px solid var(--primary-color-2);
