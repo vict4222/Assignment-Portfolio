@@ -97,7 +97,8 @@ p + h3 {
   margin-top: 24px;
 }
 
-p {
+p,
+li {
   font-family: var(--body-text);
   font-size: 1.125rem;
   line-height: 1.5;
@@ -185,7 +186,7 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(4px) brightness(90%);
+  backdrop-filter: blur(4px) brightness(60%);
 }
 
 #nav-bar {
@@ -200,7 +201,7 @@ button {
 #home {
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 #nav-items {
@@ -213,12 +214,14 @@ button {
 .nav-item {
   position: relative;
   list-style: none;
+  line-height: 0;
+  padding-bottom: 0;
 }
 
 .nav-link {
   font-size: 1.125rem;
   font-family: var(--headline-text);
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 #theme-toggle {
@@ -324,7 +327,7 @@ header::after {
 }
 
 .right-column {
-  max-width: 600px;
+  max-width: 576px;
 }
 
 /* #endregion about */
@@ -431,6 +434,41 @@ header::after {
 }
 
 /* #endregion assignments */
+
+/* #region conclusion */
+
+#conclusion {
+  position: relative;
+  padding-top: 15vh;
+  padding-bottom: 80px;
+}
+
+#conclusion::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color-1);
+  clip-path: polygon(0% calc(0% + 10vw), 100% 0, 100% 100%, 0% 100%);
+  z-index: -1;
+}
+
+#conclusion-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px 120px;
+}
+
+#conclusion ul {
+  padding-left: 1.25rem;
+}
+
+/* #endregion conclusion */
 
 /* #region animations */
 
