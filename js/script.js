@@ -16,6 +16,7 @@ function init() {
   HTML.navMenu = document.querySelector("#nav-items"); // nav menu
   HTML.nav = document.querySelector("nav"); // nav bar
   HTML.burgerMenu.addEventListener("click", toggleMenu);
+  HTML.switch.dataset.toggle = theme === "light" ? "light" : "dark";
 }
 
 // dark mode / light mode
