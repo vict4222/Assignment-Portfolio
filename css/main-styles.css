@@ -206,34 +206,13 @@ button {
 #nav-items {
   display: flex;
   flex-direction: row;
-  gap: 2.25rem;
+  gap: 2rem;
   margin-left: auto;
 }
 
 .nav-item {
   position: relative;
   list-style: none;
-}
-
-.nav-item::before {
-  position: absolute;
-  font-family: var(--display-text);
-  font-size: 0.75rem;
-  bottom: 2px;
-  left: -1.333rem;
-  color: var(--secondary-color);
-}
-
-.nav-item:nth-child(1)::before {
-  content: "01.";
-}
-
-.nav-item:nth-child(2)::before {
-  content: "02.";
-}
-
-.nav-item:nth-child(3)::before {
-  content: "03.";
 }
 
 .nav-link {
@@ -383,12 +362,13 @@ header::after {
 
 .card-img {
   background-size: 100%;
+  background-position: center;
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 6px;
   filter: brightness(0.6);
-  transition-property: filter;
-  transition-duration: 0.3s;
+  transition-property: filter, background-size;
+  transition-duration: 0.3s, 1.5s;
   margin-bottom: 8px;
 }
 
@@ -410,6 +390,7 @@ header::after {
 
 .card:hover .card-img {
   filter: brightness(0.9);
+  background-size: 105%;
 }
 
 .card h3 {
@@ -420,6 +401,7 @@ header::after {
   display: flex;
   justify-content: space-between;
   gap: 16px;
+  margin-top: 8px;
   align-items: center;
   opacity: 0;
   transition-property: opacity;
