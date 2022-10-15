@@ -421,6 +421,9 @@ button {
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 20px 120px;
+
+  /* motion one */
+  opacity: 0;
 }
 
 .right-column {
@@ -620,6 +623,10 @@ footer p {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.animate {
+  opacity: 0;
 }
 
 /* #endregion animations */
