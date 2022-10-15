@@ -22,6 +22,11 @@ body {
   min-height: 200vh;
 }
 
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
 .max-width {
   max-width: 1200px;
   margin-inline: auto;
@@ -106,9 +111,13 @@ li {
   padding-bottom: 0.25rem;
 }
 
+p + p {
+  margin-top: 0.5rem;
+}
+
 a {
   font-family: var(--body-text);
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-decoration: none;
   color: var(--accent-color-3);
   font-weight: 500;
@@ -118,8 +127,15 @@ a:not(:is(#home, .nav-link)):hover {
   text-decoration: underline;
 }
 
-.display {
+.display,
+code {
   font-family: var(--display-text);
+}
+
+code {
+  font-size: 1rem;
+  color: var(--accent-color-2);
+  border-radius: 4px;
 }
 
 /* #endregion fonts */
@@ -318,7 +334,7 @@ button {
 
 /* #region header */
 
-header {
+#header {
   position: relative;
   min-height: 90vh;
   width: 100vw;
@@ -326,11 +342,11 @@ header {
   padding-top: calc(48px + 1.75rem);
 }
 
-header h2 {
+#header h2 {
   font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
 }
 
-header::after {
+#header::after {
   content: "";
   position: absolute;
   top: 0;
@@ -350,7 +366,7 @@ header::after {
   z-index: -1;
 }
 
-.header-container {
+#header-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px 72px;
@@ -550,7 +566,7 @@ header::after {
 /* #region footer */
 
 footer {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color-2);
   padding-block: 16px;
 }
 
