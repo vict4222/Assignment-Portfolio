@@ -515,10 +515,6 @@ button {
   opacity: 1;
 }
 
-.card-actions a {
-  padding-inline: 12px;
-}
-
 @media (hover: none) {
   .card-img {
     filter: brightness(0.9);
