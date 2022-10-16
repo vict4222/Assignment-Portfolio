@@ -32,8 +32,10 @@ header.c0202 {
   background-image: url("/images/mockup-4.webp");
 }
 
-div > button {
+div > a.btn {
+  display: inline-block;
   margin-bottom: 16px;
+  text-decoration: none !important;
 }
 
 /* #endregion header */
