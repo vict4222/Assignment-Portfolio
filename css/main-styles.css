@@ -164,7 +164,7 @@ button {
 
 .btn-github {
   padding: 16px;
-  background-image: url("images/github-icon.png");
+  background-image: url("../images/github-icon.png");
   background-size: 66.66%;
   background-position: center;
   background-repeat: no-repeat;
@@ -173,7 +173,7 @@ button {
 
 .btn-website {
   padding: 16px;
-  background-image: url("images/external-link-icon.png");
+  background-image: url("../images/external-link-icon.png");
   background-size: 66.66%;
   background-position: center;
   background-repeat: no-repeat;
@@ -397,7 +397,7 @@ button {
 }
 
 .header-image {
-  background-image: url("images/avatar.jpg");
+  background-image: url("../images/avatar.jpg");
   background-size: cover;
   width: 256px;
   border-radius: 100%;
@@ -476,19 +476,19 @@ button {
 }
 
 .card:nth-child(1) .card-img {
-  background-image: url("images/thumbnail-1.webp");
+  background-image: url("../images/thumbnail-1.webp");
 }
 
 .card:nth-child(2) .card-img {
-  background-image: url("images/thumbnail-2.webp");
+  background-image: url("../images/thumbnail-2.webp");
 }
 
 .card:nth-child(3) .card-img {
-  background-image: url("images/thumbnail-3.webp");
+  background-image: url("../images/thumbnail-3.webp");
 }
 
 .card:nth-child(4) .card-img {
-  background-image: url("images/thumbnail-4.webp");
+  background-image: url("../images/thumbnail-4.webp");
 }
 
 .card:hover .card-img {

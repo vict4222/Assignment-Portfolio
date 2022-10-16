@@ -17,19 +17,19 @@ header {
 }
 
 header.c0101 {
-  background-image: url("images/mockup-1.webp");
+  background-image: url("../images/mockup-1.webp");
 }
 
 header.c0102 {
-  background-image: url("images/mockup-2.webp");
+  background-image: url("../images/mockup-2.webp");
 }
 
 header.c0201 {
-  background-image: url("images/mockup-3.webp");
+  background-image: url("../images/mockup-3.webp");
 }
 
 header.c0202 {
-  background-image: url("images/mockup-4.webp");
+  background-image: url("../images/mockup-4.webp");
 }
 
 div > a.btn {
